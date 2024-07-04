@@ -1,8 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import styles from "./NaoEncontrada.module.css";
 import erro404 from "src/assets/erro_404.png";
 import BotaoPrincipal from "src/componentes/BotaoPrincipal";
 
 export default function NaoEncontrada() {
+    const navegar = useNavigate();
+
     return (
         <>
             <div className={styles.conteudoContainer}>
@@ -14,8 +17,8 @@ export default function NaoEncontrada() {
                 <p className={styles.paragrafo}>
                     Aguarde uns instantes e recarregue a página, ou volte para a página inicial.
                 </p>
-                <div className={styles.botaoContainer}>
-                    <BotaoPrincipal>Voltar</BotaoPrincipal>
+                <div className={styles.botaoContainer} onClick={() => navegar(-1)}>
+                    <BotaoPrincipal tamanho="lg">Voltar</BotaoPrincipal>
                 </div>
                 <img
                     src={erro404}
