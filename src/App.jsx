@@ -12,8 +12,8 @@ function App() {
 
             <Routes>
                 <Route path="/" element={<PaginaPadrao />}>
-                    <Route path="/" element={<Inicio />} />
-                    <Route path="/sobremin" element={<SobreMin />} />
+                    <Route index element={<Inicio />} />
+                    <Route path="sobremin" element={<SobreMin />} />
                 </Route>
                 <Route path="*" element={<h2>Página não encontrada</h2>} />
             </Routes>
