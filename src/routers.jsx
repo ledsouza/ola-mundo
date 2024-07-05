@@ -16,8 +16,8 @@ function AppRouters() {
                 <Route path="/" element={<PaginaPadrao />}>
                     <Route index element={<Inicio />} />
                     <Route path="sobremin" element={<SobreMin />} />
-                    <Route path="post/:id" element={<Post />} />
                 </Route>
+                <Route path="post/:id" element={<Post />} />
                 <Route path="*" element={<NaoEncontrada />} />
             </Routes>
 
